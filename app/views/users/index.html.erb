@@ -11,4 +11,32 @@
   <% end %>
 </div>
 
+<div class="table-responsive">
+  <table class="table table-bordered">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Country</th>
+      <th scope="col">Contact number</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <%= render user %>
+    </tr>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
+  </tbody>
+</table>
+</div>
+
+
 <%= link_to "New user", new_user_path %>
