@@ -2,41 +2,26 @@
 
 <h1>Users</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
+<%= link_to "New user", new_user_path, class: "btn btn-primary" %>
 
 <div class="table-responsive">
   <table class="table table-bordered">
-  <caption>List of users</caption>
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">Country</th>
-      <th scope="col">Contact number</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Contact number</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
   <tbody>
-  <% @users.each do |user| %>
-    <tr>
-      <%= render user %>
-    </tr>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+      <% @users.each do |user| %>
+          <%= render user %>
+      <% end %>
   </tbody>
 </table>
 </div>
 
-
-<%= link_to "New user", new_user_path %>
