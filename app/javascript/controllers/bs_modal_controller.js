@@ -10,5 +10,9 @@ export default class extends Controller {
   disconnect() {
     this.modal.hide();
   }
-  
+
+  submitEnd(event) {
+    event.preventDefault();
+    this.modal.hide();
+  }
 }
