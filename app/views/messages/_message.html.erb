@@ -1,7 +1,14 @@
-<div id="<%= dom_id message %>">
-  <p>
-    <strong>Title:</strong>
-    <%= message.title %>
-  </p>
+<tr id="message_row_<%= message.id %>">
+  
 
-</div>
+  <td>
+    <%= message.title %>
+  </td>
+  <td>
+      <%= link_to "View", message, class: 'btn btn-info' %>
+      <%= link_to "Edit", edit_message_path(message), class: 'btn btn-success' %>
+  </td>
+  <td>
+      <%= button_to "Delete", message, method: :delete, data: { confirm: 'Are you sure? '}, class: 'btn btn-danger' %>
+  </td>
+</tr>
