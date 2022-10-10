@@ -6,4 +6,9 @@ export default class extends Controller {
     this.modal = new bootstrap.Modal(this.element)
     this.modal.show();
   }
+
+  disconnect() {
+    this.modal.hide();
+  }
+  
 }
