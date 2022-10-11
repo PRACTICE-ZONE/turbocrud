@@ -1,7 +1,12 @@
+<div class="container">
+    <h1>search</h1>
+</div>
 <div class="row">
     <div class="col-4">
     <%= form_with url: root_path do |f| %>
-        <%= f.text_field :query, class: 'form-control' %>
+        <%= f.text_field :query, class: 'form-control',
+         "data-controller": :search,
+         "data-action": "keyup->search#search" %>
     <% end %>
     </div>
     <div class="col-8"></div>
