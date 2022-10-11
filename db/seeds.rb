@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+100.times do 
+    Post.find_or_create_by(title: Faker::Quote.famous_last_words) do |post|
+        post.content = Faker::Lorem.paragraphs(
+            number: 5,
+            supplemental: true
+            random_sentences_to_add: 4
+            )
+    end
+end
