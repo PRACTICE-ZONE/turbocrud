@@ -8,8 +8,13 @@
          "data-controller": :search,
          "data-action": "keyup->search#search" %>
     <% end %>
+
+    
+    <%= render 'welcome/results' %>
     </div>
     <div class="col-8">
-    <%= render 'welcome/results' %>
+        <%= turbo_fram_tag :show_content do %>
+        
+        <% end %>
     </div>
 </div>
