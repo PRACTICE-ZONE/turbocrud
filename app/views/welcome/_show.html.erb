@@ -1,4 +1,6 @@
-<h1>
-<%= @post.title %>
-</h1>
-<%= @post.content %>
+<%= turbo_frame_tag :show_content do >
+    <h1>
+    <%= @post.title %>
+    </h1>
+    <%= @post.content %>
+<% end %>
