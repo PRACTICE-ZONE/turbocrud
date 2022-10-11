@@ -2,7 +2,9 @@
 
 <h1>messages</h1>
 
-<%= link_to "New message", new_message_path, data: { controller: 'message-model' }, class: "btn btn-primary" %>
+<div id="new_message">
+  <%= render partial: 'messages/form', locals: { message: Message.new } %>
+</div>
 
 <div class="table-responsive">
   <table class="table table-bordered">
@@ -13,10 +15,8 @@
           </tr>
           
         </thead>
-  <tbody>
-      <% @messages.each do |message| %>
-          <%= render message %>
-      <% end %>
+  <tbody id="messages">
+      <%= render @messages %>
   </tbody>
 </table>
 </div>
